@@ -8,12 +8,9 @@ int main() {
       .fps = 60,
       .ball_size = 5,
       .ball_default_speed = 8.0f,
+      .num_balls = 20,
   };
 
   game::Game game{config};
-  for (uint i = 0; i < 10; i++) {
-    game.spawn_ball();
-  }
-
   return game.render_loop();
 }

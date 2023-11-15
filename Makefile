@@ -1,12 +1,12 @@
 PROJECT = game
 
-CC = clang++
+CC = g++
 SRC_DIR =./src
 SRC = $(wildcard ${SRC_DIR}/*.cpp)
 OUT_DIR = bin
 OBJ = ${SRC:.cpp=.o}
 LIBS = -lraylib
-CFLAGS = -Wextra -Werror -Wall -std=c++20 -Wc++20-extensions -O3
+CFLAGS = -Wextra -Werror -Wall -std=c++20 -O3
 BINARY = ${OUT_DIR}/${PROJECT}
 
 main: ${OBJ}

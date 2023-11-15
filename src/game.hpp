@@ -15,6 +15,7 @@ struct GameConfig {
   uint fps;
   uint ball_size;
   float ball_default_speed;
+  uint num_balls;
 };
 
 struct ScreenBounds {
@@ -25,6 +26,8 @@ struct ScreenBounds {
 };
 
 ScreenBounds get_screen_bounds(const GameConfig &c);
+int random_int(int min, int max);
+float random_float(float min, float max);
 
 class Ball {
 public:

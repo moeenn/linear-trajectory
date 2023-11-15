@@ -3,14 +3,14 @@
 game::Ball::Ball(const ScreenBounds &b, float speed) {
   this->bounds = b;
   this->pos = Vector2{
-      .x = (float)GetRandomValue(b.x_min, b.x_max),
-      .y = (float)GetRandomValue(b.y_min, b.y_max),
+      .x = random_float(b.x_min, b.x_max),
+      .y = random_float(b.y_min, b.y_max),
   };
   this->speed = speed;
   this->m = std::rand() / (float)RAND_MAX,
-  this->c = GetRandomValue(-1 * b.y_max, b.y_max);
+  this->c = random_int(-1 * b.y_max, b.y_max);
   this->direction =
-      (GetRandomValue(1, 2) % 2 == 0) ? Direction::Right : Direction::Left;
+      (random_int(1, 2) % 2 == 0) ? Direction::Right : Direction::Left;
 }
 
 void game::Ball::update_trajectory() {

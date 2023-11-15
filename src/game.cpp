@@ -12,8 +12,12 @@ void game::Game::spawn_ball() {
 
 int game::Game::render_loop() {
   InitWindow(config.win_width, config.win_height, config.win_name);
-
   SetTargetFPS(config.fps);
+
+  for (uint i = 0; i < this->config.num_balls; i++) {
+    this->spawn_ball();
+  }
+
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(BLACK);
