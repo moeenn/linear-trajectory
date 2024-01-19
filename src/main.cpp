@@ -2,13 +2,13 @@
 
 int main() {
   const game::GameConfig config = {
-      .win_width = 1200,
-      .win_height = 800,
+      .win_width = 800,
+      .win_height = 500,
       .win_name = "Game",
       .fps = 60,
-      .ball_size = 5,
-      .ball_default_speed = 8.0f,
-      .num_balls = 20,
+      .ball_size = 3,
+      .ball_default_speed = 5.0f,
+      .num_balls = 30,
   };
 
   game::Game game{config};

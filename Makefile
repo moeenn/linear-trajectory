@@ -1,6 +1,6 @@
 PROJECT = game
 
-CC = g++
+CC = clang++
 SRC_DIR =./src
 SRC = $(wildcard ${SRC_DIR}/*.cpp)
 OUT_DIR = bin

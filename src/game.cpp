@@ -24,7 +24,7 @@ int game::Game::render_loop() {
 
     for (Ball &ball : state.balls) {
       ball.update_trajectory();
-      DrawCircleV(ball.position(), config.ball_size, WHITE);
+      DrawCircleV(ball.position(), config.ball_size, ball.color);
     }
 
     EndDrawing();

@@ -28,11 +28,13 @@ struct ScreenBounds {
 ScreenBounds get_screen_bounds(const GameConfig &c);
 int random_int(int min, int max);
 float random_float(float min, float max);
+unsigned char random_char();
 
 class Ball {
 public:
   Vector2 pos;
   float speed;
+  Color color;
   float m, c;
   Direction direction;
   ScreenBounds bounds;

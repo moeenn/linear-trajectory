@@ -11,6 +11,14 @@ game::Ball::Ball(const ScreenBounds &b, float speed) {
   this->c = random_int(-1 * b.y_max, b.y_max);
   this->direction =
       (random_int(1, 2) % 2 == 0) ? Direction::Right : Direction::Left;
+
+  /** spawn with a random color */
+  this->color = Color {
+    .r = random_char(),
+    .g = random_char(),
+    .b = random_char(),
+    .a = 255,
+  };
 }
 
 void game::Ball::update_trajectory() {
