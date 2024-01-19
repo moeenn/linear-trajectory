@@ -1,4 +1,4 @@
-PROJECT = game
+PROJECT = linear-trajectory
 
 CC = clang++
 SRC_DIR =./src
@@ -9,7 +9,7 @@ LIBS = -lraylib
 CFLAGS = -Wextra -Werror -Wall -std=c++20 -O3
 BINARY = ${OUT_DIR}/${PROJECT}
 
-main: ${OBJ}
+build: ${OBJ}
 	${CC} -o ${BINARY} ${OUT_DIR}/*.o ${LIBS}
 
 .cpp.o:
@@ -19,9 +19,5 @@ main: ${OBJ}
 run:
 	@${BINARY}
 
-build:
-	@bear -- make
-
 clean:
-	@rm -v ./compile_commands.json
 	@rm -v ${OUT_DIR}/*.o ${BINARY}
